@@ -1,0 +1,12 @@
+D:\Курсы Senticode\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\bin\Debug\VDubovsky.CompanyManagement.Library.dll
+D:\Курсы Senticode\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\bin\Debug\VDubovsky.CompanyManagement.Library.pdb
+D:\Курсы Senticode\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.csprojAssemblyReference.cache
+D:\Курсы Senticode\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.csproj.CoreCompileInputs.cache
+D:\Курсы Senticode\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.dll
+D:\Курсы Senticode\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.pdb
+D:\Senticode Courses\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\bin\Debug\VDubovsky.CompanyManagement.Library.dll
+D:\Senticode Courses\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\bin\Debug\VDubovsky.CompanyManagement.Library.pdb
+D:\Senticode Courses\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.csprojAssemblyReference.cache
+D:\Senticode Courses\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.csproj.CoreCompileInputs.cache
+D:\Senticode Courses\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.dll
+D:\Senticode Courses\VDubovsky.CompanyManagement\VDubovsky.CompanyManagement.Library\obj\Debug\VDubovsky.CompanyManagement.Library.pdb
