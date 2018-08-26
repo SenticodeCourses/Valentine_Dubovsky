@@ -1,1 +1,1 @@
-Project for development company management.
+Repository with study projects
