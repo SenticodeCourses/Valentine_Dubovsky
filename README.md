@@ -1,1 +1,1 @@
-Project for development company management.
+Public repository for C# training courses projects.

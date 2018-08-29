@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDubovsky.SystemMonitoring.App", "VDubovsky.SystemMonitoring.App\VDubovsky.SystemMonitoring.App.csproj", "{31E8AE7A-262C-497B-81B4-D0C36C89784F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDubovsky.SystemMonitoring.FolderMonitoring", "VDubovsky.SystemMonitoring.FolderMonitoring\VDubovsky.SystemMonitoring.FolderMonitoring.csproj", "{5D49FA78-08F7-4B50-8387-3AB405EECB65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31E8AE7A-262C-497B-81B4-D0C36C89784F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E8AE7A-262C-497B-81B4-D0C36C89784F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E8AE7A-262C-497B-81B4-D0C36C89784F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E8AE7A-262C-497B-81B4-D0C36C89784F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D49FA78-08F7-4B50-8387-3AB405EECB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D49FA78-08F7-4B50-8387-3AB405EECB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D49FA78-08F7-4B50-8387-3AB405EECB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D49FA78-08F7-4B50-8387-3AB405EECB65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21B493CB-C6CF-4273-87A8-DD04C016BB80}
+	EndGlobalSection
+EndGlobal
