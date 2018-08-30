@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VDubovsky.CompanyManagement.Library.CompanyResources;
+﻿using System.Collections.Generic;
 using VDubovsky.CompanyManagement.Library.CompanyResources.Staff;
 
 namespace VDubovsky.CompanyManagement.Library

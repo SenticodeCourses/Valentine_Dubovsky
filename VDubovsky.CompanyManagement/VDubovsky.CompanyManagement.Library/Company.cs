@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VDubovsky.CompanyManagement.Library.CompanyResources;
 using VDubovsky.CompanyManagement.Library.CompanyResources.Staff;
 
@@ -10,8 +8,8 @@ namespace VDubovsky.CompanyManagement.Library
 {
     public partial class Company
     {
-        private bool lackOfManagers = false;
-        private bool lackOfWorkers = false;
+        private bool _lackOfManagers;
+        private bool _lackOfWorkers;
 
         public List<Employee> Employees = new List<Employee>();
         public List<Hardware> Hardware = new List<Hardware>();
@@ -52,14 +50,14 @@ namespace VDubovsky.CompanyManagement.Library
                     if (fwrk.Level == Level.Senior)
                     {
                         Projects.Last().Team.Managers.Add(fwrk);
-                        fwrk.isInTeam = true;
+                        fwrk.IsInTeam = true;
                         dpt.FreeWorkers.Remove(fwrk);
                         break;
                     }
                 }
                 if (Projects.Last().Team.Managers.Count == managersCount)
                 {
-                    lackOfManagers = true;
+                    _lackOfManagers = true;
                     break;
                 }
             }
@@ -76,7 +74,7 @@ namespace VDubovsky.CompanyManagement.Library
                             if (fwrk.Level == task.HardnessLevel)
                             {
                                 Projects.Last().Team.Members.Add(fwrk);
-                                fwrk.isInTeam = true;
+                                fwrk.IsInTeam = true;
                                 dpt.FreeWorkers.Remove(fwrk);
                                 task.Performer = (Specialist)fwrk;
                                 break;
@@ -84,7 +82,7 @@ namespace VDubovsky.CompanyManagement.Library
                         }
                 }
                 if (task.Performer == null)
-                    lackOfWorkers = true;
+                    _lackOfWorkers = true;
             }
         }
         public void CreateProject(Customer customer, string name)
@@ -93,7 +91,7 @@ namespace VDubovsky.CompanyManagement.Library
             CustomersProjectsDict[customer].Add(Projects.Last());
             HireManagerToProject();
             HireWorkersToProject();
-            if (lackOfManagers || lackOfWorkers)
+            if (_lackOfManagers || _lackOfWorkers)
             {
                 Projects.Remove(Projects.Last());
                 PrintImpossible();
@@ -110,7 +108,7 @@ namespace VDubovsky.CompanyManagement.Library
                         {
                             if ( Projects[i].Tasks[j].Performer.Speciality == Departments[k].Speciality)
                             {
-                                Projects[i].Tasks[j].Performer.isInTeam = false;
+                                Projects[i].Tasks[j].Performer.IsInTeam = false;
                                 Departments[k].FreeWorkers.Add(Projects[i].Tasks[j].Performer);
                                 Projects[i].Team.Members.Remove(Projects[i].Tasks[j].Performer);
                                 Projects[i].Tasks.Remove(Projects[i].Tasks[j]);
@@ -125,15 +123,15 @@ namespace VDubovsky.CompanyManagement.Library
                     Console.WriteLine($"Project for {Projects[i].Customer.Name} is finished.");
                 }
             }
-            var TempCustomersProjectsDict = new Dictionary<Customer, List<Project>>();
+            var tempCustomersProjectsDict = new Dictionary<Customer, List<Project>>();
             foreach (var kv in CustomersProjectsDict)
             {
                 if (kv.Value.Count != 0)
                 {
-                    TempCustomersProjectsDict.Add(kv.Key, kv.Value);
+                    tempCustomersProjectsDict.Add(kv.Key, kv.Value);
                 }
             }
-            CustomersProjectsDict = TempCustomersProjectsDict;
+            CustomersProjectsDict = tempCustomersProjectsDict;
         }
     }
 }

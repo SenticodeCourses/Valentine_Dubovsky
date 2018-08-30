@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VDubovsky.CompanyManagement.Library.CompanyResources;
-using VDubovsky.CompanyManagement.Library.CompanyResources.Staff;
 
 namespace VDubovsky.CompanyManagement.Library
 {
     public class Project
     {
-        private static Random rand = new Random();
+        private static readonly Random Rand = new Random();
         public Project()
         {
-            Tasks = Enumerable.Range(1, rand.Next(2, 7))
+            Tasks = Enumerable.Range(1, Rand.Next(2, 7))
                 .Select(i => new Task())
                 .ToList();
             Team = new Team();

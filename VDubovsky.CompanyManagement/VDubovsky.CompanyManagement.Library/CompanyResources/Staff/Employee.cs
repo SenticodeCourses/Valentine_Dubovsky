@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VDubovsky.CompanyManagement.Library.CompanyResources.Staff
+﻿namespace VDubovsky.CompanyManagement.Library.CompanyResources.Staff
 {
     public abstract class Employee
     {
@@ -13,6 +7,6 @@ namespace VDubovsky.CompanyManagement.Library.CompanyResources.Staff
         public Speciality Speciality { get; set; }
         public Sex Sex { get; set; }
         public Level Level { get; set; }
-        public bool isInTeam = false;
+        public bool IsInTeam = false;
     }
 }

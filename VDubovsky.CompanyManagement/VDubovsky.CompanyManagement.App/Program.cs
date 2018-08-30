@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VDubovsky.CompanyManagement.Library;
 using VDubovsky.CompanyManagement.Library.CompanyResources;
 using VDubovsky.CompanyManagement.Library.CompanyResources.Staff;
@@ -11,6 +9,7 @@ namespace VDubovsky.CompanyManagement.App
 {
     class Program
     {
+        // ReSharper disable once UnusedParameter.Local
         static void Main(string[] args)
         {
             Company company = new Company()
@@ -19,7 +18,7 @@ namespace VDubovsky.CompanyManagement.App
                 {
                     new Head { Name = "Charlie Alvarado", Age = 34, Sex = Sex.Male, Speciality = Speciality.Developer, Level = Level.Senior },
                     new Head { Name = "Jordan Carroll", Age = 31, Sex = Sex.Male, Speciality = Speciality.DevOps, Level = Level.Senior },
-                    new Head { Name = "Alice Phelps", Age = 32, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Senior },
+                    new Head { Name = "Alice Phelps", Age = 32, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Senior },
 
                     new Specialist { Name = "Javier Mckinney", Age = 30, Sex = Sex.Male, Speciality = Speciality.Developer, Level = Level.Senior },
                     new Specialist { Name = "Bryan Leonard", Age = 29, Sex = Sex.Male, Speciality = Speciality.Developer, Level = Level.Senior },
@@ -31,11 +30,11 @@ namespace VDubovsky.CompanyManagement.App
                     new Specialist { Name = "Ignacio Warren", Age = 29, Sex = Sex.Male, Speciality = Speciality.DevOps, Level = Level.Senior},
                     new Specialist { Name = "Debra Harrison", Age = 30, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Senior},
                     new Specialist { Name = "Sabrina Patton", Age = 30, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Senior},
-                    new Specialist { Name = "Otis Bridges", Age = 31, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Senior },
-                    new Specialist { Name = "Juan Bass", Age = 32, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Senior },
-                    new Specialist { Name = "Armando Wheeler", Age = 30, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Senior },
-                    new Specialist { Name = "Sally Bowen", Age = 29, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Senior },
-                    new Specialist { Name = "Samantha Briggs", Age = 29, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Senior },
+                    new Specialist { Name = "Otis Bridges", Age = 31, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Senior },
+                    new Specialist { Name = "Juan Bass", Age = 32, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Senior },
+                    new Specialist { Name = "Armando Wheeler", Age = 30, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Senior },
+                    new Specialist { Name = "Sally Bowen", Age = 29, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Senior },
+                    new Specialist { Name = "Samantha Briggs", Age = 29, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Senior },
 
                     new Specialist { Name = "Amos Ortiz", Age = 25, Sex = Sex.Male, Speciality = Speciality.Developer, Level = Level.Middle },
                     new Specialist { Name = "Brandon Lloyd", Age = 26, Sex = Sex.Male, Speciality = Speciality.Developer, Level = Level.Middle },
@@ -57,16 +56,16 @@ namespace VDubovsky.CompanyManagement.App
                     new Specialist { Name = "Michele Bowman", Age = 25, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Middle },
                     new Specialist { Name = "Geraldine Hines", Age = 28, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Middle },
                     new Specialist { Name = "Marie Andrews", Age = 24, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Middle },
-                    new Specialist { Name = "Shane Martinez", Age = 25, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Percy Bishop", Age = 26, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Jermaine Rowe", Age = 24, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Mandy Gomez", Age = 27, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Joan Jensen", Age = 25, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Heidi Hunter", Age = 26, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Jody Mills", Age = 24, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Chelsea Lawrence", Age = 23, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Donna Gonzales", Age = 23, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Middle },
-                    new Specialist { Name = "Shari Wolfe", Age = 24, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Shane Martinez", Age = 25, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Percy Bishop", Age = 26, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Jermaine Rowe", Age = 24, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Mandy Gomez", Age = 27, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Joan Jensen", Age = 25, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Heidi Hunter", Age = 26, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Jody Mills", Age = 24, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Chelsea Lawrence", Age = 23, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Donna Gonzales", Age = 23, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Middle },
+                    new Specialist { Name = "Shari Wolfe", Age = 24, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Middle },
 
                     new Specialist { Name = "Kurt Luna", Age = 20, Sex = Sex.Male, Speciality = Speciality.Developer, Level = Level.Junior },
                     new Specialist { Name = "Moses Alvarez", Age = 21, Sex = Sex.Male, Speciality = Speciality.Developer, Level = Level.Junior },
@@ -88,22 +87,22 @@ namespace VDubovsky.CompanyManagement.App
                     new Specialist { Name = "Irma Ortiz", Age = 20, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Junior },
                     new Specialist { Name = "Annie Reed", Age = 22, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Junior },
                     new Specialist { Name = "Arlene	Hamilton", Age = 23, Sex = Sex.Female, Speciality = Speciality.DevOps, Level = Level.Junior },
-                    new Specialist { Name = "Daniel Flores", Age = 21, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Phillips Clayton", Age = 21, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Bradley Medina", Age = 20, Sex = Sex.Male, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Blanca Ramos", Age = 21, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Amanda Bryan", Age = 22, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Holly Brock", Age = 21, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Mabel Mason", Age = 20, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Jeannette Lynch", Age = 21, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Melanie Smith", Age = 23, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Junior },
-                    new Specialist { Name = "Vickie	Phillips", Age = 24, Sex = Sex.Female, Speciality = Speciality.QAEngineer, Level = Level.Junior }
+                    new Specialist { Name = "Daniel Flores", Age = 21, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Phillips Clayton", Age = 21, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Bradley Medina", Age = 20, Sex = Sex.Male, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Blanca Ramos", Age = 21, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Amanda Bryan", Age = 22, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Holly Brock", Age = 21, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Mabel Mason", Age = 20, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Jeannette Lynch", Age = 21, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Melanie Smith", Age = 23, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Junior },
+                    new Specialist { Name = "Vickie	Phillips", Age = 24, Sex = Sex.Female, Speciality = Speciality.QaEngineer, Level = Level.Junior }
                 },
                 Hardware = new List<Hardware>(),
                 Departments = new List<Department>()
                 {
                     new Department() { Speciality = Speciality.Developer },
-                    new Department() { Speciality = Speciality.QAEngineer },
+                    new Department() { Speciality = Speciality.QaEngineer },
                     new Department() { Speciality = Speciality.DevOps }
                 },
                 Soft = Enumerable.Range(1, 3)
@@ -133,6 +132,7 @@ namespace VDubovsky.CompanyManagement.App
             }
 
 
+            // ReSharper disable once FunctionNeverReturns
         }
 
 
