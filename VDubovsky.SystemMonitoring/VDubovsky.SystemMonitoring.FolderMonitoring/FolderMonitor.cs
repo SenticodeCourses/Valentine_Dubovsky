@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
 
@@ -11,15 +9,13 @@ namespace VDubovsky.SystemMonitoring.FolderMonitoring
     // 1. Получить список файлов и папок в указанной папке
     // 2. Сохранение полученного списка
     // 3. Сравнение двух списков
-
-        //Хранить слепок состояния в файле
+    
     public class FolderMonitor
     {
-        private string _path;
-        private int _interval;
-        private List<string> LastFolderState = new List<string>();
-
-        public bool IsActive { get; set; }
+        private readonly string _path;
+        private readonly int _interval;
+        private List<string> _lastFolderState;
+        public bool IsActive { get; set; } = true;
 
         public FolderMonitor(string path, int interval)
         {
@@ -27,7 +23,7 @@ namespace VDubovsky.SystemMonitoring.FolderMonitoring
             if (!Directory.Exists(path)) throw new DirectoryNotFoundException();
             _path = path;
             _interval = interval;
-            LastFolderState = GetFolderState();
+            _lastFolderState = GetFolderState();
         }
 
         public void Monitoring()
@@ -37,41 +33,45 @@ namespace VDubovsky.SystemMonitoring.FolderMonitoring
             while(true)
             {
                 Thread.Sleep(_interval * 1000);
-                Console.WriteLine($"\nChanges noticed on {DateTime.Now}:");
-                TrackChanges();
+                if (IsActive)
+                {
+                    Console.WriteLine($"\nChanges noticed on {DateTime.Now}:");
+                    TrackChanges();
+                }
             }
+            // ReSharper disable once FunctionNeverReturns
         }
 
         public void TrackChanges()
         {
-            List<string> delChanges = new List<string>();
-            List<string> addChanges = new List<string>();
-            var CurrentFolderState = GetFolderState();
-            delChanges = DeletionCheck(CurrentFolderState);
-            addChanges = AdditionCheck(CurrentFolderState);
+            var currentFolderState = GetFolderState();
+            var delChanges = DeletionCheck(currentFolderState);
+            var addChanges = AdditionCheck(currentFolderState);
             if (delChanges.Count == 0 && addChanges.Count == 0)
                 Console.WriteLine("No changes.");
-            LastFolderState = CurrentFolderState;
+            _lastFolderState = currentFolderState;
         }
 
         public List<string> GetFolderState()
         {
-            return Directory.EnumerateDirectories(_path)
+            var folderContent = Directory.EnumerateDirectories(_path)
                 .ToList();
+            folderContent.AddRange(Directory.EnumerateFiles(_path));
+            return folderContent;
         }
 
         public List<string> CompareDirectoryStates(List<string> state1, List<string> state2)
         {
-            List<string> StatesDifferences = new List<string>();
+            var statesDifferences = new List<string>();
             foreach (var diff in state1)
                 if (!state2.Contains(diff))
-                    StatesDifferences.Add(diff);
-            return StatesDifferences;
+                    statesDifferences.Add(diff);
+            return statesDifferences;
         }
 
         public List<string> DeletionCheck(List<string> currentState)
         {
-            var changes = CompareDirectoryStates(LastFolderState, currentState);
+            var changes = CompareDirectoryStates(_lastFolderState, currentState);
             foreach (var ch in changes)
                 Console.WriteLine($"Directory {ch} was deleted.");
             return changes;
@@ -79,7 +79,7 @@ namespace VDubovsky.SystemMonitoring.FolderMonitoring
 
         public List<string> AdditionCheck(List<string> currentState)
         {
-            var changes = CompareDirectoryStates(currentState, LastFolderState);
+            var changes = CompareDirectoryStates(currentState, _lastFolderState);
             foreach (var ch in changes)
                 Console.WriteLine($"Directory {ch} was added.");
             return changes;
